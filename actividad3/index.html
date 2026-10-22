@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Actividad 3 · Deformaciones</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <header><h1 id="title">Actividad 3 · Deformaciones</h1></header>
+  <div class="layout">
+    <aside>
+      <div id="controls"></div>
+      <div class="actions">
+        <button id="reset" type="button">Restablecer</button>
+        <button id="demo" type="button">Modelo original</button>
+      </div>
+    </aside>
+    <section class="viewer">
+      <div class="views">
+        <figure>
+          <figcaption>Original</figcaption>
+          <canvas id="original" width="450" height="430" aria-label="Modelo original"></canvas>
+        </figure>
+        <figure>
+          <figcaption>Resultado</figcaption>
+          <canvas id="result" width="450" height="430" aria-label="Modelo deformado"></canvas>
+        </figure>
+      </div>
+      <p id="model">Cargando barril...</p>
+      <p><a id="download" target="_blank" rel="noopener" href="https://github.com/JED-01/Practica2/blob/main/modelos/barrel.obj">Descargar OBJ de GitHub</a></p>
+      <label for="file">Cargar archivo OBJ</label>
+      <input id="file" type="file" accept=".obj">
+      <p id="error" role="alert"></p>
+    </section>
+  </div>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
