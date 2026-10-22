@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Actividad 2 · Inclinación (shear)</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<main>
+ <header><h1 id="title"></h1></header>
+ <div class="layout"><aside><div id="controls"></div>
+ <div class="actions"><button id="reset">Restablecer</button><button id="demo">Modelo original</button></div></aside>
+ <section class="viewer"><div class="views">
+ <figure><figcaption>Original</figcaption><canvas id="original" width="450" height="430" aria-label="Modelo original"></canvas></figure>
+ <figure><figcaption>Resultado</figcaption><canvas id="result" width="450" height="430" aria-label="Modelo transformado"></canvas></figure>
+ </div><p id="model">Cargando barril...</p>
+ <p><a id="drive" target="_blank" rel="noopener">Descargar OBJ de GitHub</a></p>
+ <label for="file">Cargar archivo OBJ</label><input id="file" type="file" accept=".obj">
+ <p id="error" role="alert"></p></section></div>
+</main>
+
+<script src="script.js"></script></body></html>
