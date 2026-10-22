@@ -5,13 +5,13 @@ Programa 3D interactivo con Three.js que carga `modelos/barrel.obj` del reposito
 ## Ejecutar en CodePen
 
 1. Entra en https://codepen.io/pen/ y crea un Pen nuevo.
-2. Copia todo `codepen.html` al panel **HTML**.
-3. Copia todo `style.css` al panel **CSS**.
-4. Copia todo `script.js` al panel **JS**.
-5. Usa JavaScript normal, **sin preprocesador**. No necesitas instalar paquetes ni agregar recursos externos en las opciones: el mapa de importación del panel HTML carga Three.js 0.181.0 y sus complementos.
+2. En el editor nuevo de CodePen, reemplaza el contenido de **`index.html`** por todo el texto de `codepen.html`.
+3. Reemplaza el contenido de **`style.css`** por el de nuestro `style.css`.
+4. Reemplaza el contenido de **`script.js`** por el de nuestro `script.js`.
+5. El archivo `index.html` incluye los enlaces `<link rel="stylesheet" href="./style.css">` y `<script type="module" src="./script.js"></script>`, indispensables en el editor nuevo. No necesitas añadir recursos externos: el mapa de importación carga Three.js 0.181.0 y sus complementos.
 6. Guarda el Pen para obtener el enlace que debe incluirse en el reporte.
 
-> El archivo `codepen.html` es un fragmento para pegar en el panel HTML de CodePen, no una página independiente. En CodePen los tres paneles se combinan automáticamente.
+> A diferencia del editor clásico de tres paneles, el editor nuevo de CodePen utiliza archivos. Por eso necesitamos un documento HTML completo que haga referencia a los archivos CSS y JS.
 
 ## Funciones
 
