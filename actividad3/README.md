@@ -4,9 +4,11 @@ Código en JavaScript y Canvas 2D, con el mismo diseño y método de dibujo del 
 
 ## Ejecutar en CodePen
 
-**Lo más fácil:** abre el Pen de Diego, selecciona **Fork** para crear una copia en tu cuenta y reemplaza solamente el contenido de `script.js` con el nuestro. El script detecta los mismos elementos HTML de Diego, cambia el título y sustituye el enlace a Drive por el de tu GitHub. Cambia también el nombre del Pen a `Actividad 3 - Deformaciones` y guárdalo.
+1. Crea un **Pen nuevo** y ponle el nombre `Actividad 3 - Deformaciones`.
+2. Copia `index.html`, `style.css` y `script.js` de esta carpeta a los archivos correspondientes en CodePen.
+3. Guarda el Pen y copia su enlace para el reporte.
 
-**Alternativa:** crea un Pen nuevo, copia `index.html`, `style.css` y `script.js` de esta carpeta a los archivos correspondientes y guarda el enlace para el reporte.
+**Alternativa si prefieres usar el Pen de Diego directamente:** haz Fork de su programa y reemplaza solamente el contenido de `script.js` con el nuestro. El script detecta los elementos HTML existentes, cambia el título y sustituye el enlace a Drive por el de GitHub.
 
 El HTML ya enlaza correctamente los archivos CSS y JavaScript. **No agregues Three.js ni dependencias adicionales**, porque la proyección se dibuja directamente con Canvas 2D.
 
