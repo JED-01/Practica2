@@ -39,4 +39,4 @@ El OBJ referencia `barrel.mtl`, pero no es necesario subir ese archivo: el progr
 3. Rotación: X = 30°, Y = 45°, Z = 15°.
 4. Escalamiento: X = 1.5, Y = 0.8, Z = 1.2.
 
-Después de cada captura, presiona **Restablecer transformaciones** para aislar los resultados de la siguiente operación.
+Después de cada captura, presiona **Restablecer** para aislar los resultados de la siguiente operación. La presentación del programa es deliberadamente sencilla: fondo blanco, controles en un panel lateral y una sola vista 3D.
