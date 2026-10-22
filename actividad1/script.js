@@ -1,4 +1,5 @@
-import * as THREE from 'three';
+// La URL explícita también permite que CodePen detecte el script como módulo.
+import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.181.0/build/three.module.js';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { OBJLoader } from 'three/addons/loaders/OBJLoader.js';
 
