@@ -229,6 +229,7 @@ if(typeof document!=='undefined') {
   };
   $('demo').onclick=()=>{loadBarrel();};
   $('drive').href=CONFIG.downloadURL;
+  $('drive').textContent='Descargar OBJ de GitHub';
   loadBarrel();
 }
 if(typeof module!=='undefined') module.exports={I,mul,apply,rotation,affine,shear,
