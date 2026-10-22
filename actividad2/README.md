@@ -6,11 +6,9 @@ Programa original: https://codepen.io/editor/DIEGO-BALDERAS-the-encoder/pen/01a1
 
 ## Instrucciones para CodePen
 
-1. Crea **un Pen nuevo** para la Actividad 2 (no reemplaces la Actividad 1).
-2. Copia `index.html` a `index.html` de CodePen.
-3. Copia `style.css` a `style.css` de CodePen.
-4. Copia `script.js` a `script.js` de CodePen.
-5. Guarda el Pen y copia su enlace al reporte.
+**La manera más fácil:** abre el Pen original de Diego, haz **Fork** en tu cuenta y reemplaza solamente `script.js` con la versión de esta carpeta. El HTML y CSS de Diego ya funcionan sin cambios; el JavaScript actualiza también la etiqueta del enlace a GitHub.
+
+**Alternativa:** crea un Pen nuevo para la Actividad 2 y copia los archivos `index.html`, `style.css` y `script.js` que están aquí. No reemplaces la Actividad 1. Guarda tu nuevo Pen y copia el enlace al reporte.
 
 El HTML ya enlaza el CSS y el JavaScript mediante rutas relativas. No requiere Three.js ni paquetes, porque el motor del programa dibuja en un Canvas 2D.
 
