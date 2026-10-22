@@ -1,0 +1,81 @@
+<!-- Pega este bloque en el panel HTML de CodePen. -->
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.181.0/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.181.0/examples/jsm/"
+  }
+}
+</script>
+
+<div class="app">
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark">3D</span>
+      <div>
+        <strong>Gráficos por Computadora</strong>
+        <span>Práctica 2 · Actividad 1</span>
+      </div>
+    </div>
+    <span class="topic">TRANSFORMACIONES AFINES</span>
+  </header>
+
+  <main class="layout">
+    <aside class="sidebar">
+      <div class="intro">
+        <span class="eyebrow">PANEL DE CONTROL</span>
+        <h1>Transforma el objeto</h1>
+        <p>Modifica los nueve parámetros usando los controles. Los cambios se aplican al modelo OBJ en tiempo real.</p>
+      </div>
+
+      <section class="control-card">
+        <div class="group-title">
+          <span class="group-icon translate-icon">↔</span>
+          <div><h2>Traslación</h2><small>Posición en el espacio</small></div>
+        </div>
+        <div id="translation-controls" class="slider-list"></div>
+      </section>
+
+      <section class="control-card">
+        <div class="group-title">
+          <span class="group-icon rotate-icon">↻</span>
+          <div><h2>Rotación</h2><small>Ángulos en grados</small></div>
+        </div>
+        <div id="rotation-controls" class="slider-list"></div>
+      </section>
+
+      <section class="control-card">
+        <div class="group-title">
+          <span class="group-icon scale-icon">⤢</span>
+          <div><h2>Escalamiento</h2><small>Factor por cada eje</small></div>
+        </div>
+        <div id="scale-controls" class="slider-list"></div>
+      </section>
+
+      <button id="reset-button" class="reset-button" type="button">↺ &nbsp;Restablecer transformaciones</button>
+    </aside>
+
+    <section class="viewer-panel" aria-label="Visor 3D interactivo">
+      <div class="viewer-heading">
+        <div>
+          <span class="eyebrow">MODELO DE GITHUB</span>
+          <h2>Barrel <span>.obj</span></h2>
+        </div>
+        <span id="load-status" class="status" role="status">Cargando modelo...</span>
+      </div>
+
+      <div id="viewport" class="viewport"></div>
+
+      <div class="viewer-footer">
+        <div class="axis-key">
+          <span><i class="axis-dot x"></i>X</span>
+          <span><i class="axis-dot y"></i>Y</span>
+          <span><i class="axis-dot z"></i>Z</span>
+        </div>
+        <label class="check-label"><input id="show-axes" type="checkbox" checked> Mostrar ejes</label>
+        <label class="check-label"><input id="show-wireframe" type="checkbox"> Malla</label>
+      </div>
+      <p class="hint">Arrastra para girar la cámara · Rueda del mouse para acercar o alejar · Clic derecho para desplazar la vista.</p>
+    </section>
+  </main>
+</div>
