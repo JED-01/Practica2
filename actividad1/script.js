@@ -20,10 +20,6 @@ camera.position.set(4.3, 3.0, 5.3);
 const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 renderer.outputColorSpace = THREE.SRGBColorSpace;
-renderer.toneMapping = THREE.ACESFilmicToneMapping;
-renderer.toneMappingExposure = 1.35;
-renderer.shadowMap.enabled = true;
-renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 container.appendChild(renderer.domElement);
 
 const orbit = new OrbitControls(camera, renderer.domElement);
@@ -34,36 +30,17 @@ orbit.minDistance = 2.4;
 orbit.maxDistance = 18;
 orbit.update();
 
-scene.add(new THREE.HemisphereLight(0xd9f1ff, 0x243445, 2.0));
+scene.add(new THREE.HemisphereLight(0xffffff, 0x888888, 2.2));
 
-const keyLight = new THREE.DirectionalLight(0xffedcf, 3.6);
+const keyLight = new THREE.DirectionalLight(0xffffff, 2.5);
 keyLight.position.set(4, 8, 6);
-keyLight.castShadow = true;
-keyLight.shadow.mapSize.set(1024, 1024);
-keyLight.shadow.camera.left = -9;
-keyLight.shadow.camera.right = 9;
-keyLight.shadow.camera.top = 9;
-keyLight.shadow.camera.bottom = -9;
 scene.add(keyLight);
 
-const rimLight = new THREE.DirectionalLight(0x71b8ff, 2.0);
-rimLight.position.set(-4, 3, -5);
-scene.add(rimLight);
-
 const floorLevel = -1.35;
-const floor = new THREE.Mesh(
-  new THREE.PlaneGeometry(30, 30),
-  new THREE.ShadowMaterial({ color: 0x000b17, opacity: 0.24 })
-);
-floor.rotation.x = -Math.PI / 2;
-floor.position.y = floorLevel;
-floor.receiveShadow = true;
-scene.add(floor);
-
-const grid = new THREE.GridHelper(12, 24, 0x487391, 0x27425d);
+const grid = new THREE.GridHelper(12, 24, 0x999999, 0xd9d9d9);
 grid.position.y = floorLevel + 0.004;
 grid.material.transparent = true;
-grid.material.opacity = 0.30;
+grid.material.opacity = 0.55;
 scene.add(grid);
 
 const axes = new THREE.AxesHelper(2.6);
@@ -75,14 +52,14 @@ const modelRoot = new THREE.Group();
 scene.add(modelRoot);
 const meshes = [];
 
-// 2. Materiales: se respeta la separación cloth/metal del OBJ.
+// 2. Material gris sencillo para observar la forma del OBJ.
 function makeMaterial(original) {
   const isMetal = original?.name?.toLowerCase().includes('metal');
   return new THREE.MeshStandardMaterial({
     name: original?.name || 'material',
-    color: isMetal ? 0x9eafc2 : 0xc8874a,
-    metalness: isMetal ? 0.72 : 0.12,
-    roughness: isMetal ? 0.32 : 0.68,
+    color: isMetal ? 0x888888 : 0xb9b9b9,
+    metalness: 0.1,
+    roughness: 0.8,
     side: THREE.DoubleSide
   });
 }
@@ -111,8 +88,6 @@ async function loadModel() {
     part.material = Array.isArray(part.material)
       ? part.material.map(makeMaterial)
       : makeMaterial(part.material);
-    part.castShadow = true;
-    part.receiveShadow = true;
     meshes.push(part);
   });
 
